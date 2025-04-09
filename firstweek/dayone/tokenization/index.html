@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Token Encoder</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Token Encoder</h1>
+      <div class="form">
+        <textarea
+          id="user-input"
+          placeholder="Enter your text here..."
+        ></textarea>
+        <button id="submit-button">Encode</button>
+        <div id="alert-message" class="alert">Input field is empty</div>
+      </div>
+
+      <div class="result-box">
+        <p><strong>Total Tokens:</strong> <span id="token">0</span></p>
+        <p>
+          <strong>Alpha Output:</strong>
+          <span id="output-alpha">&lt;start&gt; &lt;end&gt;</span>
+        </p>
+        <p><strong>Encoded Output:</strong></p>
+        <div id="output-nums" class="output-box"></div>
+      </div>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
