@@ -1,0 +1,104 @@
+We all use AI in our daily lives, but we haven’t idea how it works behind the scenes. In this blog, we’ll try to break it down in simple terms using OpenAI’s GPT as an example.
+
+What does GPT stand for? 
+GPT stands for Generative Pretrained Transformer. Let’s break that down:
+
+1. Generative
+“Generative” means it can generate something new. For example, Google doesn’t generate content, it just indexes pages created by others. But GPT can generate new text based on your input. It’s like asking a human to write a paragraph for you, tailored exactly to your request.
+
+2. Pretrained
+GPT doesn’t learn everything on the fly. It is trained beforehand on a massive amount of data. This means it already knows a lot when you interact with it. However, if you ask GPT about something that happened after its training date (called the knowledge cutoff), it might not have an answer unless connected to real-time data (like in ChatGPT with browsing enabled).
+
+For example:
+
+GPT model: Only knows what it was trained on.
+ChatGPT: Uses GPT + tools (like browsing or code interpreter) to help answer live questions.
+Training is a massive process and can’t be done every second or even every day. That’s why models are trained at certain intervals and then used for inference (answering your questions).
+
+3. Transformer
+This is the core architecture. It’s not a regular word it’s a big deal in AI. The transformer model was introduced in Google’s 2017 paper titled “Attention Is All You Need.”
+
+The magic of transformers lies in a few powerful concepts.
+
+How Transformers Work (In Simple Terms)
+Let’s walk through the process with an example sentence:
+
+“The cat sat on the mat.”
+
+Input Encoding
+Computers don’t understand human language they only understand numbers. So first, we need to convert text into numbers using a process called tokenization.
+
+Tokenization breaks the sentence into parts (tokens):
+"The", "cat", "sat", "on", "the", "mat" → 6 tokens.
+
+Tokenization
+Each token is then mapped to a number using a dictionary (called vocab size). For example:
+
+A = 1, B = 2, etc. (simplified idea)
+GPT-4’s vocab size is around 200,000 tokens.
+Vector Embeddings
+Once text is tokenized, it’s converted into vectors (mathematical representations). These vectors carry meaning in a way that allows the model to understand context.
+
+Let’s say:
+
+“USA” — “Trump”
+Now if you say “India”, the model might suggest “Modi”.
+How? Because it learns semantic relationships through vector embedding. Think of words positioned in 3D space, where similar words are closer together.
+Positional Encoding
+Here’s a twist:
+
+“The cat sat on the mat”
+“The mat sat on the cat”
+Both have the same tokens, but the meaning is different. That’s where position matters.
+
+Positional Encoding helps the model understand the order of words. It uses mathematical formulas to assign positions to each token so that meaning is preserved.
+
+Self-Attention
+Self-attention is the core mechanism in transformers that allows the model to look at other words in the same sentence to understand the meaning of a word in context.
+
+Example:
+“The river bank”
+“The ICICI bank”
+In both sentences, the word “bank” appears. But its meaning is different.
+
+In the first, “bank” is related to “river” (riverbank).
+In the second, “bank” refers to a financial institution (“ICICI”).
+Through self-attention, the model can relate “bank” to the most relevant word in the sentence (“river” or “ICICI”) and understand the intended meaning.
+
+Multi-Head Attention:
+While self-attention looks at all other words, multi-head attention enhances this by doing it from multiple perspectives at once.
+
+Think of it like using multiple sets of eyes, where each set looks at the sentence differently maybe one set focuses on position, another on semantics, another on syntax, and so on.
+
+This helps the model capture richer relationships and nuanced meanings by attending to different aspects of the sentence in parallel.
+
+Feedforward Neural Network
+After attention, the model passes the output through a neural network to refine it further and prepare the response.
+
+Two Phases of GPT
+Training Phase:
+The model learns patterns from a large dataset using tons of computing power (GPUs/TPUs).
+It’s expensive and time-consuming.
+Inference Phase:
+This is when you ask a question and get a response. For example:
+You ask: What’s 2 + 2?
+Model responds: It might say 9 at first (during training), but over time and feedback, it learns the correct answer is 4.
+This is the process to train a model and behind this there high power GPU machine and many thing you want and that is the main reason to, those companies can not train their model often.
+
+Let’s See a Simple Example:
+Input: “How are you?”
+This sentence goes through:
+
+Tokenization: Split into tokens
+Embedding: Tokens turned into vectors
+Attention + Positional Encoding: Understands “you” refers to the person being asked
+Feedforward + Softmax + Temperature: Generates a reply like “I’m good, thank you!”
+Softmax helps choose the most likely word in the output.
+Temperature controls randomness in the answer (0.1 = very accurate, 1.0 = more creative).
+
+This is just the cherry on the cake. The full transformer model involves many layers, mathematical operations, and deep learning techniques.
+
+But I hope this gave you a simplified view of how GPT works — from converting your text into numbers, understanding the context, and generating a meaningful reply.
+
+
+this is basic overview of any LLM model i try to add more points in this
