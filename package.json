@@ -1,0 +1,24 @@
+{
+  "name": "genaicohort",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rakesh-bhetariya/genaicohort.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/rakesh-bhetariya/genaicohort/issues"
+  },
+  "homepage": "https://github.com/rakesh-bhetariya/genaicohort#readme",
+  "dependencies": {
+    "tiktoken": "^1.0.22"
+  }
+}
